@@ -23,6 +23,7 @@ echo "✨ run.sh · verifying uploads & attachments permission folders."
 [ -d /var/lib/wcs/tenants/*/uploads ] && chown -R wcs:wcs var/lib/wcs/tenants/*/uploads/
 
 
+# OPT
 echo "✨ run.sh · Monkey-patching mails via '/var/lib/authentic2/locale/fr/LC_MESSAGES/mail-translation.py'."
 python3 /var/lib/authentic2/locale/fr/LC_MESSAGES/mail-translation.py
 
@@ -122,6 +123,7 @@ then
 	screen -d -m -c /opt/publik/screenrc
 fi
 
+# OPT
 # iMio DE/FR translations monkey patch
 # Should only run on Eupen or Kelmis
 if [ -e /var/lib/wcs/tenants/eupen-formulaires.guichet-citoyen.be/ ] || [ -e /var/lib/wcs/tenants/kelmis-formulaires.guichet-citoyen.be/ ]
